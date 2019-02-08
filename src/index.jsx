@@ -258,6 +258,15 @@ apiReferences.setLocale = lang => {
   }
 }
 
+// setTheme API
+apiReferences.setTheme = lang => {
+  if (exposedAPI.setTheme) {
+    return exposedAPI.setTheme(lang)
+  } else {
+    showAPIError('setTheme')
+  }
+}
+
 module.exports = {
   init,
   version: __VERSION__,
